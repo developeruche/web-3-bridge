@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(248, 241, 241, 0.87);
+}
+
+.workout__home__container {
+  padding: 2rem;
+}
+
+.header ul {
+  display: flex;
+}
+
+.header li {
+  text-decoration: none;
+  list-style: none;
+  margin-left: 10px;
+}

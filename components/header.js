@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Header() {
     return (
         <div className="header">
@@ -6,8 +8,8 @@ function Header() {
             </div>
 
             <ul>
-                <li>Iteration</li>
-                <li>Leadership</li>
+                <li><Link href="/">Add Iteration</Link></li>
+                <li><Link href="/leadership">Leadership</Link></li>
             </ul>
         </div>
     )
