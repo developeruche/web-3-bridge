@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 
 function Leadership() {
     const [users, setUsers] = useState([])
+    const [onClientSide, setOnClientSide] = useState(false)
 
     useEffect(() => {
         let users_ = JSON.parse(localStorage.getItem("webthree"));
@@ -14,6 +15,9 @@ function Leadership() {
         setUsers(users_);
         console.log(users, "working")
 
+        if (typeof window !== "undefined") {
+            setOnClientSide(true);
+        }
     }, [])
     
 
@@ -24,7 +28,7 @@ function Leadership() {
             <br />
 
             {
-                users ? (
+                users && onClientSide ? (
                     <ul className="leadership__list">
                         <li>
                             <p>{users[0].name}</p> <p>{users[0].iteration.length}</p> <p>{users[0].iteration[users[0].iteration.length - 1]}</p>
