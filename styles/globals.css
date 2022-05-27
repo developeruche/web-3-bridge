@@ -35,3 +35,12 @@ a {
   list-style: none;
   margin-left: 10px;
 }
+
+.leadership__list {
+  padding: 20px;
+}
+
+.leadership__list li {
+  display: flex;
+  justify-content: space-between;
+}
